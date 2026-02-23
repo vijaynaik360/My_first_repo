@@ -1,0 +1,17 @@
+//GIT FIRST CLASS//
+**Initialise git repo**
+git init
+
+**check status of git repo**
+git status
+
+**adding files to staging area**
+git add
+
+** To commit **
+git commit -m "message"
+
+
+//GIT SECOND CLASS//
+**To remove filr from staging area*
+git rm --cached <filename>

@@ -28,8 +28,11 @@ git remote add origin <link>
 
 
 **To create git branch**
-git branch -m Main
+git branch Main
 
 
 **To push code from local branch to remote repo**
 git push -u origin main
+
+**To switch another branch**
+git checkout <branch name>

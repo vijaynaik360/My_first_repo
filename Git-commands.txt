@@ -36,3 +36,6 @@ git push -u origin main
 
 **To switch another branch**
 git checkout <branch name>
+
+**To push for first time from new branch**
+git push --set-upstream origin vijay

@@ -15,3 +15,7 @@ git commit -m "message"
 //GIT SECOND CLASS//
 **To remove filr from staging area*
 git rm --cached <filename>
+
+
+**To check what we have changed in last commit**
+git log -p

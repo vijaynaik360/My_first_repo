@@ -17,5 +17,5 @@ git commit -m "message"
 git rm --cached <filename>
 
 
-**To check what we have changed in last commit**
+**To check what we have changed in commits**
 git log -p

@@ -39,3 +39,11 @@ git checkout <branch name>
 
 **To push for first time from new branch**
 git push --set-upstream origin vijay
+
+
+
+**To fetch meta data from remote repo**
+git fetch
+
+**To fetch and merge data from remote*
+git pull

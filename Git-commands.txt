@@ -67,4 +67,15 @@ git reset
 		history change 	`branches safety       	usecases
 git revert   	No 		 yes			To go to previous commits without changing latest commit
 git reset	Yes 		no 			move head differ
-git rebase	Yes		no 			rewrite the commits	
+git rebase	Yes		no 			rewrite the commits
+
+//to add particularly one commit from one branch to another
+git cherry pick <commit id>	(After checkout to the branch where you need to add commit)
+
+
+
+** to check commits**
+git log
+
+**to check commits with bexctra details**
+git log -p

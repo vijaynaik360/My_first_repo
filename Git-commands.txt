@@ -79,3 +79,6 @@ git log
 
 **to check commits with bexctra details**
 git log -p
+
+**one line commit details**
+git log --oneline

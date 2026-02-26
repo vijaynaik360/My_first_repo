@@ -47,3 +47,24 @@ git fetch
 
 **To fetch and merge data from remote*
 git pull
+
+
+//git rebase
+**To make linear from another branch commits**
+Lets say if main branch has commits a->b->c and vijay branch has commits d->e
+git rebase main (on checkout vijay) command will make vijay branch commits as a->b->c->d->e
+
+**to delete previous commits**
+git rebase -i head ~3 will delete prvious last 3 commits
+
+
+**To go to previous commits without changing latest commit**
+git revert
+
+**To go to previous commits with deleting latest commit**
+git reset
+
+		history change 	`branches safety       	usecases
+git revert   	No 		 yes			To go to previous commits without changing latest commit
+git reset	Yes 		no 			move head differ
+git rebase	Yes		no 			rewrite the commits	

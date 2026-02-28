@@ -1,0 +1,225 @@
+**To clear command line**
+clear
+
+**to create file from cat**
+ cat > file1.txt
+
+**to view file content**
+cat file1.txt
+
+**To view list of files in directory**
+ls
+
+
+**To add content to existing file**
+cat >>fie1.txt
+
+**To add multiple files to single file**
+cat file1.txt file2.txt > file3.txt
+
+**Copy from 1 file to another**
+cat file2.txt > file4.txt
+(Note: cat command will over write the existing file if content from another fle is copied to existing file)
+
+**To display content from last line**
+tac file1.txt
+
+**To create empty file**
+touch empty.txt
+
+**to create multiple empty files**
+touch f1.txt f2.txt f3.txt
+touch file{5..100}.txt
+
+**to check time stamp of file**
+stat f1.txt
+
+**To create and edit file**
+vi file101.txt
+**press i for insert add contents then esc then :wq**
+
+**to create and edit file using nano**
+nano file102.txt
+ctrl+x
+ctrl+y
+enter
+
+**To create directory**
+mkdir folder.txt
+
+
+**To remove all files in folder|**
+rm -rf *
+
+
+**to create nested folders**
+mkdir -p d1/d2/d3
+
+**present working directory**
+pwd
+
+**Go to path  at once**
+cd dira/dirb/dirc
+
+**to folder up**
+cd ../..
+
+**to check files hidden also**
+ls -a
+
+**to create hidden file**
+touch .file1.txt
+
+**log list**
+ls -l
+
+**rescent created files and directory at top**
+ls -lt 
+
+**rescent created files and directory at bottom**
+ls -ltr
+
+
+**show all and hidden files**
+ll
+
+
+**copy from one file to another file**
+cp f1 f2
+
+**move file**
+mv f2 f1
+mv f2 foder1
+
+**to delete folders or files**
+rm -rf f1
+
+**to remove entry directory**
+rmdir d1
+
+**list all commands used**
+history
+
+**chmod: it is used to change the permission of file or directory**
+chmod -R 777 dir
+chmod 777 fi
+
+
+**to check storage size**
+du -sh
+
+
+**to check size of the system**
+df -h
+
+**to check system memory**
+free -m
+
+
+**print statement**
+echo 'good evening'
+
+
+**to print multiple statement**
+echo -e "good morning\nwelcome"
+
+
+**to find location of directories or files**
+find . -type f -iname v1.txt
+find . -type d -iname d2
+
+
+ago +
+Within -
+
+
+if i want to list the files which are created or modified 3 months ago
+find . -type f -mtime +90
+
+if i want to list the files which are created or modified within 1 day
+find . -type f -mtime -1
+
+
+if i want to list the files which are created or modified 5 minutes ago
+find . -type f -mmin +5
+
+if i want to list the files which are created or modified within 5 minutes ago
+find . -type f -mmin -5
+
+
+**rename file**
+mv f4 myfile
+
+**TO get list of all empty files**
+find . -type f -empty
+
+
+** to get files according to their permission**
+find . -type f -perm 777
+
+**to find files according to size**
+find . -type f -size -4k(less than 4kb)
+find . -type f -size +4k(more than 4kb)
+
+
+//Links
+link- file shortcut
+If we make any change it will reflect to original file or link
+There are 2 types of link
+1. soft link- it is shortcut to the file if we make any changes to the original file it will reflect in link , if the original file is deleted then link does not work.
+syntax: ln -s filename linkname
+2. Hard link - It is a shortcut to the file if we make any changes to the original file it will reflect in link, if the original file is deleted then still link will work
+syntax: ln filename linkname
+
+
+**super user do switch user*
+sudo su -
+
+
+**to create user**
+useradd -m puja
+
+**to change pwd**
+passwd puja
+
+**to swqitch user**
+su puja
+
+**to check linux vesion**
+uname -v
+uname -a
+
+**ip address**
+hostname -i
+
+**server name**
+hostname
+
+**compolete server name**
+hostname -f
+
+
+////total ports 65535////
+sh  portno- 22
+http port -80
+https port- 443
+scp port- 22
+telnet port-23
+dns-53
+smtp- 25
+icmp- no ports
+ftp-21
+rdp-
+tcp-23
+udp-
+
+**to create public and private key**
+ssh-keygen
+
+*how to setup pwdless connection between 2 servers**
+step1: create a public key and private key in main server using ssh-keygen command and copy the public key(it will created in hidden folder .ssh)
+step2: now go to server2 and paste the public key content in authorised key file
+step3: Now run command ssh root@server2_ip_address in main server
+
+ssh root@10.0.28.210
+

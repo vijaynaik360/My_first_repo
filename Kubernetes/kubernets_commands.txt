@@ -1,0 +1,72 @@
+
+**to get pods
+kubectl get pods
+
+**to get nodes*
+kubectl get nodes
+
+**to run images
+kubetl run ngnix --image=ngnix
+
+**to delete pod*
+kubectl delete pod nginx
+
+microdegree-cluster
+**to create pod from replicaset yaml**
+kubectl apply -f replicaset.yaml
+
+**replcaset**
+kubectl get rs
+
+**expose port**
+kubectl expose deployment my-deployment --port=80 --target-port=80 --type=LoadBalancer --name=my-deploylb --dry-run=client -o yaml
+
+
+
+
+**replica set**
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: frontend
+  labels:
+    app: guestbook
+    tier: frontend
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  selector:
+    matchLabels:
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        tier: frontend
+    spec:
+      containers:
+      - name: php-redis
+        image: us-docker.pkg.dev/google-samples/containers/gke/gb-frontend:v5
+
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: frontend
+  labels:
+    app: guestbook
+    tier: frontend
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  selector:
+    matchLabels:
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        tier: frontend
+    spec:
+      containers:
+      - name: php-redis
+        image: us-docker.pkg.dev/google-samples/containers/gke/gb-frontend:v5
+

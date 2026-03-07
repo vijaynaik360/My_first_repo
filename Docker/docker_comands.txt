@@ -1,0 +1,50 @@
+//important docker commands
+
+**Lists all images present in system**
+docker images
+
+
+**to check active containers**
+docker ps
+
+
+**to check all dead and running containers**
+docker ps -a
+
+**pull images*
+docker pull *imageaname* 
+docker pull ubuntu
+
+**run image/create container**
+docker run -it -d --name <> -p <portno>
+socker run -it -d --name <> -p 8080:8000 imagename/imageid
+
+-it means interactive terminal or mode
+-d means detach mode
+--name <> -container name
+-p means port
+-p 8080:8000 means -p hostport:container port
+
+
+//Docker file//
+#Calling the base image
+FROM ubuntu:24.04
+
+#Updating and exporting the packages
+RUN sudo apt update
+RUN sudo apt install apache2 -y
+
+#Copying files and exporting to image
+COPY index.html /var/www/html/
+
+#Default application port
+EXPOSE 80
+
+#Start the application
+
+
+//build custom image
+docker build -t myown:1 .
+
+
+
